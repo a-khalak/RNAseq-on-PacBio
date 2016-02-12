@@ -173,7 +173,7 @@ for n in np.r_[0:N]:
             plt.plot(RLgrid, RLcdf)
             plt.ylabel('Readlength CDF')
             plt.ylim((0, 1))
-#            plt.show()
+            plt.show()
 
             if savePlots:
                 filename = 'Detail_Read%.0f_Trans%.0f.png' %  (photodamageTau, transcriptLen)
@@ -187,13 +187,13 @@ for n in np.r_[0:N]:
             if 0:
                 debug.set_trace()
                 x = plt.ginput()            
-                print x[0]
+                print (x[0])
                 if (x[0][1] < 1 and savePlots):
                     fig = plt.gcf()    
                     filename = 'Detail_Read%.0f_Trans%.0f.png' %  (photodamageTau, transcriptLen)
                     fig.savefig(filename, format='png')
                 elif ((x[0][1]>1) & (x[0][0]<1000)):
-                    raise Exception, "quitting"
+                    raise Exception ("quitting")
             elif 0:
                 x = raw_input("(q)uit, (a)dvance, or (s)ave: ")
                 if (x == "s" or x == "S"):
@@ -201,7 +201,7 @@ for n in np.r_[0:N]:
                     filename = 'Detail_Read%.0f_Trans%.0f.png' %  (photodamageTau, transcriptLen)
                     fig.savefig(filename, format='png')
                 elif (x == "q" or x == "Q"):
-                    raise Exception, "quitting"
+                    raise Exception  ("quitting")
 
 
 
